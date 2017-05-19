@@ -1,0 +1,33 @@
+/* NavBar Styles */
+.oc-nav {
+    background-color: transparent !important;
+    color: white;
+    font-size: calc(1.8em + 2px);
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+.activate-nav {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 99;
+  font-size: 40px;
+  border: 1px dotted white;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  transition: all .8s ease-in-out;
+  transform: rotate(0);
+
+  i {
+    padding-left: 7px;
+  }
+}.activate-nav:hover {
+  transition: all .8s ease-in-out;
+  transform: rotate(360);
+}
