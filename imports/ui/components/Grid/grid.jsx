@@ -35,11 +35,16 @@ class Grid extends Component {
           width:0,
           visibility:'hidden'
         });
-
+        $('.id-square').css({
+          'width':'inherit',
+          transition:'all .8s ease-in-out',
+          'font-size': 'calc(20em + 8px)',
+        })
         setTimeout(function() {
           FlowRouter.go('/ockupy');
           FlowRouter.reload('/ockupy');
         },1000);
+
 
       }else {
         $('.sm-square').css({
@@ -65,6 +70,11 @@ class Grid extends Component {
           display:'flex',
           visibility:'visible'
         });
+        $('.id-square').css({
+          'font-size': 'calc(5em + 8px)',
+          transition: 'all .8s ease-in-out',
+        });
+
       }
     });
   }
@@ -96,6 +106,10 @@ class Grid extends Component {
           width:0,
           visibility:'hidden'
         });
+        $('.id-square').css({
+          'font-size': 'calc(10em + 8px)',
+          transition: 'all .8s ease-in-out',
+        });
         setTimeout(function() {
           FlowRouter.go('/portfolio');
           FlowRouter.reload('/portfolio');
@@ -124,6 +138,10 @@ class Grid extends Component {
           width:'65%',
           display:'flex',
           visibility:'visible'
+        });
+        $('.id-square').css({
+          'font-size': 'calc(5em + 8px)',
+          transition: 'all .8s ease-in-out',
         });
       }
     });
@@ -205,7 +223,9 @@ class Grid extends Component {
       </div>
       <div className="flex-stack">
         <div className="sm-square " id="square-1">
-          <p className="id-square">O</p>
+          <div  className="flex-item">
+            <p className="id-square">OCKUPY</p>
+          </div>
         </div>
         <div className="sm-square-2 " id="square-2">
           <div className="flex-item">

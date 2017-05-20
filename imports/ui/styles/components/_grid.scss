@@ -16,6 +16,7 @@
         align-items: center;
         padding: 4em;
         flex-direction: column;
+        cursor: pointer;
 
         .flex-item:first-child {
             p {
@@ -85,8 +86,9 @@
         flex-shrink: 1;
         flex-basis: auto;
 
-        p {
-            font-size: calc(22em + 8px);
+        .id-square {
+            color: black;
+            font-size: calc(5em + 8px);
         }
     }
 
@@ -105,7 +107,8 @@
         flex-basis: auto;
 
         .flex-item {
-            p {
+
+            .id-square {
                 color: white;
                 font-size: calc(5em + 8px);
             }
