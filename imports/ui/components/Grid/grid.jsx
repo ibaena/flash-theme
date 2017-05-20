@@ -36,6 +36,11 @@ class Grid extends Component {
           visibility:'hidden'
         });
 
+        setTimeout(function() {
+          FlowRouter.go('/ockupy');
+          FlowRouter.reload('/ockupy');
+        },1000);
+
       }else {
         $('.sm-square').css({
           transition:'all .8s ease-in-out',
@@ -47,7 +52,8 @@ class Grid extends Component {
         $('.mission-text').css({
           visibility:'visible',
           opacity:1,
-          transition:'all 1.4s ease-in-out'
+          transition:'all .4s ease-in-out',
+          'transition-delay':'.6s'
         });
         $('.flex-stack').css({
           transition:'all .8s ease-in-out',
@@ -78,7 +84,7 @@ class Grid extends Component {
         $('.mission-text').css({
           visibility:'hidden',
           opacity:0,
-          transition:'all 1.4s ease-in-out'
+          transition:'all .2s ease-in-out'
         });
         $('.flex-stack').css({
           transition:'all .8s ease-in-out',
@@ -90,6 +96,10 @@ class Grid extends Component {
           width:0,
           visibility:'hidden'
         });
+        setTimeout(function() {
+          FlowRouter.go('/portfolio');
+          FlowRouter.reload('/portfolio');
+        },1000);
 
       }else {
         $('.sm-square-2').css({
@@ -102,7 +112,8 @@ class Grid extends Component {
         $('.mission-text').css({
           visibility:'visible',
           opacity:1,
-          transition:'all .8s ease-in-out'
+          transition:'all .4s ease-in-out',
+          'transition-delay':'.6s'
         });
         $('.flex-stack').css({
           transition:'all .8s ease-in-out',
@@ -117,9 +128,66 @@ class Grid extends Component {
       }
     });
   }
+  launchLarge() {
+    let triggerLarge = false;
+    $('.lg-square').on('click', function() {
+      triggerLarge = !triggerLarge;
+
+      if(triggerLarge) {
+        $('.lg-square').css({
+          transition:'all .8s ease-in-out',
+          flexGrow: 1,
+          flexShrink: 0,
+          flexBasis: 'auto',
+          'z-index':99,
+        });
+        $('.flex-stack').css({
+          transition:'all .8s ease-in-out',
+          width:'0%',
+          float:'right',
+          visibility:'hidden'
+        });
+        $('.grid-wrapper').css({
+          transition:'all .8s ease-in-out',
+          width:'100%',
+        });
+        $('.id-square').css({
+           transition:'all .6s ease-in-out',
+           visibility:'hidden',
+           opacity:0
+        });
+
+      }else {
+        $('.lg-square').css({
+          transition:'all .8s ease-in-out',
+          flexGrow: 1,
+          flexShrink: 1,
+          flexBasis: 'auto',
+          'z-index':0,
+        });
+        $('.flex-stack').css({
+          transition:'all .8s ease-in-out',
+          width:'35%',
+          visibility:'visible'
+        });
+        $('.grid-wrapper').css({
+          transition:'all .8s ease-in-out',
+          width:'65%',
+          display:'flex',
+        });
+        $('.id-square').css({
+           transition:'all 1.4s ease-in-out',
+           visibility:'visible',
+           opacity:1,
+           'transition-delay':'.4s'
+        });
+      }
+    });
+  }
   componentDidMount() {
     this.launchMission();
     this.launchPortfolio();
+    this.launchLarge();
 
   }
 
@@ -136,12 +204,12 @@ class Grid extends Component {
         </div>
       </div>
       <div className="flex-stack">
-        <div className="sm-square">
-          <p>O</p>
+        <div className="sm-square " id="square-1">
+          <p className="id-square">O</p>
         </div>
-        <div className="sm-square-2">
+        <div className="sm-square-2 " id="square-2">
           <div className="flex-item">
-            <p>Portfolio</p>
+            <p className="id-square">Portfolio</p>
           </div>
         </div>
       </div>
