@@ -1,20 +1,33 @@
+/* Mason Grid Styles */
+.mason-wrapper {
+    background: rgba(128, 128, 128, 0.07);
+    width: 95%;
+    margin: 0 auto;
+    padding: 8em 4em;
+}
+
 div#masonry {
-	display: -ms-flexbox;
-	-ms-flex-direction: column;
-	-ms-flex-wrap: wrap;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	font-size: 0;
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    -ms-flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 0;
+    width: 90%;
+    margin: 0 auto;
 }
+
 div#masonry img {
-	width: 50%;
-	transition: .8s opacity;
-  cursor: pointer;
+    width: 50%;
+    transition: 0.8s opacity;
+    cursor: pointer;
 }
+
 div#masonry:hover img {
-	opacity: 0.3;
+    opacity: 0.3;
 }
+
 div#masonry:hover img:hover {
-	opacity: 1;
+    opacity: 1;
 }
