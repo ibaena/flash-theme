@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 const INTROS = [
-  {_id:1, name:'Ockupy', background:'#ffffff', path:'/ockupy', identifier:'ockupy-intro', content:'We Ware dedicated to content.'},
+  {_id:1, name:'Ockupy', background:'#ffffff', path:'/ockupy', identifier:'ockupy-intro', content:'Entrepreneurship is the core characteristic of Ockupy’s team.'},
   {_id:2, name:'Portfolio', background:'#ffffff', path:'/portfolio', identifier:'portfolio-intro', content:'We Work With Brands We Believe In.'},
 ]
 

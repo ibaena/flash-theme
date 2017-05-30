@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Footer from '../../ui/components/Footer/footer';
 import PageHeader from '../../ui/components/PageHeader/pageHeader';
 import PageIntro from '../../ui/components/PageIntro/pageIntro';
+import PageContent from '../../ui/components/PageContent/pageContent';
 
 
 
@@ -13,6 +14,7 @@ export const About = () =>
   <div className="container-fluid flash-about" id="desktop-sites">
     <PageHeader />
     <PageIntro />
+    <PageContent />
     <Footer />
   </div>
 </div>

@@ -1,0 +1,21 @@
+/* Page Content Styles */
+
+.page-content-wrapper {
+  .page-content {
+      height: 600px;
+      width: 95%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      font-size: calc(2.4em + 4px);
+      line-height: calc(2.5em + 4px);
+      padding: 100px;
+      margin: 0 auto;
+      border-radius: 8px;
+
+      .flex-item {
+        text-align: center;
+      }
+  }
+}

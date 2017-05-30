@@ -16,18 +16,37 @@ div#masonry {
     font-size: 0;
     width: 90%;
     margin: 0 auto;
+    justify-content: space-around;
 }
 
-div#masonry img {
-    width: 50%;
+.flex-img-wrapper {
+    width: 48%;
     transition: 0.8s opacity;
     cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    img {
+      padding: 2rem;
+      width: 300px;
+    }
 }
 
-div#masonry:hover img {
+
+
+div#masonry:hover div {
     opacity: 0.3;
 }
 
-div#masonry:hover img:hover {
+div#masonry:hover div:hover {
     opacity: 1;
+}
+
+.port-links {
+  text-decoration: none;
 }
