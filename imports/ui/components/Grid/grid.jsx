@@ -225,7 +225,7 @@ class Grid extends Component {
       <div className="flex-stack">
         <div className="sm-square " id="square-1">
           <div  className="flex-item">
-            <p className="id-square">OCKUPY</p>
+            <p className="id-square">TEAM</p>
           </div>
         </div>
         <div className="sm-square-2 " id="square-2">

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 const HEADERS = [
-  {_id:1, name:'Ockupy', background:'#404340', path:'/ockupy', identifier:'ockupy-header'},
+  {_id:1, name:'Team', background:'#404340', path:'/ockupy', identifier:'ockupy-header'},
   {_id:2, name:'Portfolio', background:'#e2ceed', path:'/portfolio', identifier:'portfolio-header'},
   {_id:3, name:'', background:'#0d150a', path:'/mission', identifier:'mission-header', img:'images/logo.png'},
 ]
@@ -24,7 +24,7 @@ class PageHeader extends Component{
       let pathname = window.location.pathname
         if( pathname === '/ockupy' ) {
            obj = HEADERS.filter(function ( obj ) {
-            return obj.name === 'Ockupy';
+            return obj.name === 'Team';
           })[0];
           return this.renderHeader(obj);
 

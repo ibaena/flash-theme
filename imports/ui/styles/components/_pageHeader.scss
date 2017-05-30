@@ -13,7 +13,7 @@
 #ockupy-header {
     .flex-item {
         .title-square {
-            color: black;
+            color: white;
             font-size: calc(20em + 8px);
             transition: all .8s ease-in-out;
             text-transform: uppercase;
@@ -24,7 +24,7 @@
 #portfolio-header {
     .flex-item {
         .title-square {
-            color: white;
+            color: black;
             font-size: calc(10em + 8px);
             transition: all .8s ease-in-out;
         }
