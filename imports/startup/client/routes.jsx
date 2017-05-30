@@ -7,6 +7,7 @@ import { App } from '../../ui/layouts/App.jsx'
 import { Home } from '../../ui/pages/Home.jsx'
 import { About } from '../../ui/pages/About.jsx'
 import { Portfolio } from '../../ui/pages/Portfolio.jsx'
+import { Mission } from '../../ui/pages/Mission.jsx'
 
 
 FlowRouter.route('/', {
@@ -27,6 +28,13 @@ FlowRouter.route('/portfolio', {
     action() {
         mount(App, {
             content: <Portfolio />
+        });
+    }
+});
+FlowRouter.route('/mission', {
+    action() {
+        mount(App, {
+            content: <Mission />
         });
     }
 });

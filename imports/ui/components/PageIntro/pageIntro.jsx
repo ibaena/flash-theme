@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 const INTROS = [
   {_id:1, name:'Ockupy', background:'#ffffff', path:'/ockupy', identifier:'ockupy-intro', content:'Entrepreneurship is the core characteristic of Ockupy’s team.'},
   {_id:2, name:'Portfolio', background:'#ffffff', path:'/portfolio', identifier:'portfolio-intro', content:'We Work With Brands We Believe In.'},
+  {_id:3, name:'Mission', background:'#ffffff', path:'/mission', identifier:'mission-intro', content:'We Are Dedicated To Content.'},
 ]
 
 class PageIntro extends Component {
@@ -30,7 +31,11 @@ class PageIntro extends Component {
             return obj.name === 'Portfolio';
           })[0];
           return this.renderIntro(obj);
-        }else if ( pathname === '#three' ) {
+        }else if ( pathname === '/mission' ) {
+          obj = INTROS.filter(function ( obj ) {
+           return obj.name === 'Mission';
+         })[0];
+         return this.renderIntro(obj);
         }
   }
   componentDidMount() {

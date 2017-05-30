@@ -174,6 +174,10 @@ class Grid extends Component {
            visibility:'hidden',
            opacity:0
         });
+        setTimeout(function() {
+          FlowRouter.go('/mission');
+          FlowRouter.reload('/mission');
+        },1000);
 
       }else {
         $('.lg-square').css({
@@ -207,6 +211,7 @@ class Grid extends Component {
     this.launchPortfolio();
     this.launchLarge();
 
+
   }
 
   render() {
@@ -214,11 +219,7 @@ class Grid extends Component {
       <div>
       <div className="grid-wrapper col-lg-12 col-sm-12">
         <div className="lg-square">
-          <div className="flex-item mission-text"><p>{TEXT}</p></div>
-          <div className="flex-item mission-text"><p>{TEXTB}</p></div>
-          <div className="flex-item mission-text"><p>{TEXTC}</p></div>
-          <div className="flex-item mission-text"><p>{TEXTD}</p></div>
-          <div className="flex-item mission-text"><p>{TEXTE}</p></div>
+          <img src="images/logo.png" className="img-responsive" />
         </div>
       </div>
       <div className="flex-stack">
