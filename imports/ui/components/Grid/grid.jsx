@@ -107,7 +107,7 @@ class Grid extends Component {
           visibility:'hidden'
         });
         $('.id-square').css({
-          'font-size': 'calc(10em + 8px)',
+          'font-size': 'calc(20em + 8px)',
           transition: 'all .8s ease-in-out',
         });
         setTimeout(function() {
@@ -225,12 +225,12 @@ class Grid extends Component {
       <div className="flex-stack">
         <div className="sm-square " id="square-1">
           <div  className="flex-item">
-            <p className="id-square">TEAM</p>
+            <p className="id-square"><i className="fa fa-envelope-o" aria-hidden="true"></i></p>
           </div>
         </div>
         <div className="sm-square-2 " id="square-2">
           <div className="flex-item">
-            <p className="id-square">Portfolio</p>
+            <p className="id-square"><i className="fa fa-briefcase" aria-hidden="true"></i></p>
           </div>
         </div>
       </div>

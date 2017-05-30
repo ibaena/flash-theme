@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 const HEADERS = [
-  {_id:1, name:'Team', background:'#404340', path:'/ockupy', identifier:'ockupy-header'},
-  {_id:2, name:'Portfolio', background:'#e2ceed', path:'/portfolio', identifier:'portfolio-header'},
-  {_id:3, name:'', background:'#0d150a', path:'/mission', identifier:'mission-header', img:'images/logo.png'},
+  {_id:1, name:'Team', short:'', background:'#404340', path:'/ockupy', identifier:'ockupy-header', icon:'fa fa-envelope-o'},
+  {_id:2, name:'Portfolio', short:'', background:'#e2ceed', path:'/portfolio', identifier:'portfolio-header', icon:'fa fa-briefcase'},
+  {_id:3, name:'', short:'', background:'#0d150a', path:'/mission', identifier:'mission-header', img:'images/logo.png'},
 ]
 class PageHeader extends Component{
 
@@ -12,7 +12,10 @@ class PageHeader extends Component{
 
           <div className="page-header-cs" style={{ background:obj.background }} key={obj._id} id={obj.identifier}>
             <div className="flex-item">
-              <p className="title-square">{obj.name}</p>
+              <p className="title-square">
+                {obj.short}
+                <i className={obj.icon} aria-hidden="true"></i>
+              </p>
               <img src={obj.img} className="img-responsive" />
             </div>
           </div>
@@ -40,13 +43,20 @@ class PageHeader extends Component{
          return this.renderHeader(obj);
         }
   }
+
   componentDidMount() {
     this.detectUrl();
+    particlesJS.load('particles-js', 'json/particles.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
   }
 
   render() {
     return (
-      <div className="page-header-wrapper">{this.detectUrl()}</div>
+      <div className="page-header-wrapper">
+        <div id="particles-js"></div>
+        {this.detectUrl()}
+      </div>
     )
   }
 }

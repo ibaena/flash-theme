@@ -25,7 +25,6 @@ class PageIntro extends Component {
             return obj.name === 'Ockupy';
           })[0];
           return this.renderIntro(obj);
-
         }else if ( pathname === '/portfolio' ) {
            obj = INTROS.filter(function ( obj ) {
             return obj.name === 'Portfolio';
@@ -38,6 +37,7 @@ class PageIntro extends Component {
          return this.renderIntro(obj);
         }
   }
+
   componentDidMount() {
     this.detectUrlIntro();
   }
