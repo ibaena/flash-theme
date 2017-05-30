@@ -1,0 +1,20 @@
+div#masonry {
+	display: -ms-flexbox;
+	-ms-flex-direction: column;
+	-ms-flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	font-size: 0;
+}
+div#masonry img {
+	width: 50%;
+	transition: .8s opacity;
+  cursor: pointer;
+}
+div#masonry:hover img {
+	opacity: 0.3;
+}
+div#masonry:hover img:hover {
+	opacity: 1;
+}
