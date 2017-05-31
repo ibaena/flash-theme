@@ -33,7 +33,7 @@ class PageIntroA extends Component {
 
   render() {
     return (
-      <div>
+      <div className="hideme">
         {this.detectUrlIntroTwo()}
       </div>
     )

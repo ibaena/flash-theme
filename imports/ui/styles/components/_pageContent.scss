@@ -21,3 +21,9 @@
     float: right;
     font-size: calc(2rem + 8px);
 }
+
+.hideme {
+  opacity: 0;
+  position: relative;
+  top: 6em;
+}

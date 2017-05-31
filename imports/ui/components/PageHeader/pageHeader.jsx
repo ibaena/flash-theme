@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
+
 const HEADERS = [
   {_id:1, name:'Team', short:'', background:'#404340', path:'/ockupy', identifier:'ockupy-header', icon:'fa fa-envelope-o'},
-  {_id:2, name:'Portfolio', short:'', background:'#e2ceed', path:'/portfolio', identifier:'portfolio-header', icon:'fa fa-briefcase'},
+  {_id:2, name:'Portfolio', short:'', background:'rgba(5, 23, 243, 0.4)', path:'/portfolio', identifier:'portfolio-header', icon:'fa fa-briefcase'},
   {_id:3, name:'', short:'', background:'#0d150a', path:'/mission', identifier:'mission-header', img:'images/logo.png'},
 ]
 class PageHeader extends Component{
-
   renderHeader(obj) {
       return (
 
@@ -48,6 +48,27 @@ class PageHeader extends Component{
     this.detectUrl();
     particlesJS.load('particles-js', 'json/particles.json', function() {
       console.log('callback - particles.js config loaded');
+    });
+
+    $(window).scroll( function(){
+    $('.hideme').each( function(i){
+
+        var bottom_of_object = ($(this).position().top + $(this).outerHeight()) - 400;
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+        /* If the object is completely visible in the window, fade it it */
+        if( bottom_of_window > bottom_of_object ){
+
+            $(this).css({
+              opacity:1,
+              transition:'all .6s ease-in-out',
+              top:'0em'
+            });
+
+        }
+
+      });
+
     });
   }
 

@@ -218,17 +218,19 @@ class Grid extends Component {
     return (
       <div>
       <div className="grid-wrapper col-lg-12 col-sm-12">
-        <div className="lg-square">
-          <img src="images/logo.png" className="img-responsive" />
+        <div className="lg-square square">
+          <div className="flex-item">
+            <img src="images/logo.png" className="img-responsive" />
+          </div>
         </div>
       </div>
       <div className="flex-stack">
-        <div className="sm-square " id="square-1">
+        <div className="sm-square square" id="square-1">
           <div  className="flex-item">
             <p className="id-square"><i className="fa fa-envelope-o" aria-hidden="true"></i></p>
           </div>
         </div>
-        <div className="sm-square-2 " id="square-2">
+        <div className="sm-square-2 square" id="square-2">
           <div className="flex-item">
             <p className="id-square"><i className="fa fa-briefcase" aria-hidden="true"></i></p>
           </div>
