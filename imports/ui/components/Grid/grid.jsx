@@ -19,6 +19,7 @@ class Grid extends Component {
           flexShrink: 0,
           flexBasis: 'auto',
           'z-index':99,
+          margin:'0px 0px 0px 0px'
         });
         $('.mission-text').css({
           visibility:'hidden',
@@ -62,6 +63,7 @@ class Grid extends Component {
           flexShrink: 0,
           flexBasis: 'auto',
           'z-index':99,
+          margin:'0px 0px 0px 0px'
         });
         $('.mission-text').css({
           visibility:'hidden',
@@ -103,6 +105,7 @@ class Grid extends Component {
           flexShrink: 0,
           flexBasis: 'auto',
           'z-index':99,
+          margin:'0px'
         });
         $('.flex-stack').css({
           transition:'all .8s ease-in-out',
