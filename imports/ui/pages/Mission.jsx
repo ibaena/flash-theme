@@ -8,7 +8,6 @@ import PageContent from '../../ui/components/PageContent/pageContent';
 import PageContentA from '../../ui/components/PageContent/pageContentA';
 
 
-
 // This component - represents a single page
 export const Mission = () =>
 <div>

@@ -33,47 +33,19 @@ class Grid extends Component {
         $('.grid-wrapper').css({
           transition:'all .8s ease-in-out',
           width:0,
-          visibility:'hidden'
+          visibility:'hidden',
+          opacity:0
         });
         $('.id-square').css({
           'width':'inherit',
           transition:'all .8s ease-in-out',
           'font-size': 'calc(20em + 8px)',
         })
+
         setTimeout(function() {
           FlowRouter.go('/ockupy');
           FlowRouter.reload('/ockupy');
         },1000);
-
-
-      }else {
-        $('.sm-square').css({
-          transition:'all .8s ease-in-out',
-          flexGrow: 1,
-          flexShrink: 1,
-          flexBasis: 'auto',
-          'z-index':0,
-        });
-        $('.mission-text').css({
-          visibility:'visible',
-          opacity:1,
-          transition:'all .4s ease-in-out',
-          'transition-delay':'.6s'
-        });
-        $('.flex-stack').css({
-          transition:'all .8s ease-in-out',
-          width:'35%',
-        });
-        $('.grid-wrapper').css({
-          transition:'all .8s ease-in-out',
-          width:'65%',
-          display:'flex',
-          visibility:'visible'
-        });
-        $('.id-square').css({
-          'font-size': 'calc(5em + 8px)',
-          transition: 'all .8s ease-in-out',
-        });
 
       }
     });
@@ -104,7 +76,8 @@ class Grid extends Component {
         $('.grid-wrapper').css({
           transition:'all .8s ease-in-out',
           width:0,
-          visibility:'hidden'
+          visibility:'hidden',
+          opacity:0
         });
         $('.id-square').css({
           'font-size': 'calc(20em + 8px)',
@@ -115,34 +88,6 @@ class Grid extends Component {
           FlowRouter.reload('/portfolio');
         },1000);
 
-      }else {
-        $('.sm-square-2').css({
-          transition:'all .8s ease-in-out',
-          flexGrow: 1,
-          flexShrink: 1,
-          flexBasis: 'auto',
-          'z-index':0,
-        });
-        $('.mission-text').css({
-          visibility:'visible',
-          opacity:1,
-          transition:'all .4s ease-in-out',
-          'transition-delay':'.6s'
-        });
-        $('.flex-stack').css({
-          transition:'all .8s ease-in-out',
-          width:'35%',
-        });
-        $('.grid-wrapper').css({
-          transition:'all .8s ease-in-out',
-          width:'65%',
-          display:'flex',
-          visibility:'visible'
-        });
-        $('.id-square').css({
-          'font-size': 'calc(5em + 8px)',
-          transition: 'all .8s ease-in-out',
-        });
       }
     });
   }
@@ -179,30 +124,6 @@ class Grid extends Component {
           FlowRouter.reload('/mission');
         },1000);
 
-      }else {
-        $('.lg-square').css({
-          transition:'all .8s ease-in-out',
-          flexGrow: 1,
-          flexShrink: 1,
-          flexBasis: 'auto',
-          'z-index':0,
-        });
-        $('.flex-stack').css({
-          transition:'all .8s ease-in-out',
-          width:'35%',
-          visibility:'visible'
-        });
-        $('.grid-wrapper').css({
-          transition:'all .8s ease-in-out',
-          width:'65%',
-          display:'flex',
-        });
-        $('.id-square').css({
-           transition:'all 1.4s ease-in-out',
-           visibility:'visible',
-           opacity:1,
-           'transition-delay':'.4s'
-        });
       }
     });
   }
@@ -210,8 +131,6 @@ class Grid extends Component {
     this.launchMission();
     this.launchPortfolio();
     this.launchLarge();
-
-
   }
 
   render() {

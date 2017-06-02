@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Scrollbar from 'smooth-scrollbar';
 
 const INTROS = [
   {_id:1, name:'Ockupy', background:'#ffffff', path:'/ockupy', identifier:'ockupy-intro', content:'Ready to bring more value to your brand and your audience? Then let’s Talk.' },
@@ -38,8 +39,30 @@ class PageIntro extends Component {
         }
   }
 
+  scrollBarInstance() {
+    var scrollbar = Scrollbar.init(document.querySelector('.flash-about'),{
+      'speed': '2.2',
+      'overscrollEffect':'bounce',
+      'damping':'.04'
+  });
+      scrollbar.addListener(function() {
+        $('.hideme').each( function(i){
+            var bottom_of_object = ($(this).position().top + $(this).outerHeight()) - 400;
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            if( bottom_of_window > bottom_of_object ){
+                $(this).css({
+                  opacity:1,
+                  transition:'all .6s ease-in-out',
+                  top:'0em'
+                });
+            }
+          });
+      });
+}
   componentDidMount() {
     this.detectUrlIntro();
+    this.scrollBarInstance();
   }
 
   render() {
