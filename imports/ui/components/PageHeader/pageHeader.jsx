@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 
 const HEADERS = [
-  {_id:1, name:'Team', short:'', background:'#404340', path:'/ockupy', identifier:'ockupy-header', icon:'fa fa-envelope-o'},
-  {_id:2, name:'Portfolio', short:'', background:'rgba(5, 23, 243, 0.4)', path:'/portfolio', identifier:'portfolio-header', icon:'fa fa-briefcase'},
+  {_id:1, name:'Team', short:'', background:'rgba(64, 67, 64, .6)', path:'/ockupy', identifier:'ockupy-header', icon:'fa fa-envelope-o'},
+  {_id:2, name:'Portfolio', short:'', background:'rgba(5, 23, 243, 0.2)', path:'/portfolio', identifier:'portfolio-header', icon:'fa fa-briefcase'},
   {_id:3, name:'', short:'', background:'#0d150a', path:'/mission', identifier:'mission-header', img:'images/logo.png'},
 ]
 class PageHeader extends Component{
@@ -14,7 +14,7 @@ class PageHeader extends Component{
             <div className="flex-item">
               <p className="title-square">
                 {obj.short}
-                <i className={obj.icon} aria-hidden="true"></i>
+                <i className={obj.icon} aria-hidden="true" id={obj.identifier+"icon"}></i>
               </p>
               <img src={obj.img} className="img-responsive" />
             </div>
@@ -46,16 +46,21 @@ class PageHeader extends Component{
 
   componentDidMount() {
     this.detectUrl();
-    particlesJS.load('particles-js', 'json/particles.json', function() {
+    particlesJS.load('particles-js', 'json/particlesjs-config.json', function() {
       console.log('callback - particles.js config loaded');
     });
-
+    setTimeout(function() {
+      $("#head-vid").get(0).play();
+    },300);
   }
 
   render() {
     return (
       <div className="page-header-wrapper">
-        <div id="particles-js"></div>
+          <video  className="bgvid"   muted loop id="head-vid">
+            <source src="video/spaceA.mp4" type="video/mp4" />
+          </video>
+          <div id="particles-js"></div>
         {this.detectUrl()}
       </div>
     )

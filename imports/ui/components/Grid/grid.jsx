@@ -21,6 +21,14 @@ class Grid extends Component {
           'z-index':99,
           margin:'0px 0px 0px 0px'
         });
+        $('.sm-square-2').css({
+          margin:'0px 0px 0px 0px'
+        });
+        $('#portfolio-header-icon').css({
+          opacity:0,
+          transition:'all .3s ease-in-out',
+          visibility:'hidden'
+        });
         $('.mission-text').css({
           visibility:'hidden',
           opacity:0,
@@ -44,8 +52,7 @@ class Grid extends Component {
         })
 
         setTimeout(function() {
-          FlowRouter.go('/ockupy');
-          FlowRouter.reload('/ockupy');
+          window.location.href="/ockupy";
         },1000);
 
       }
@@ -69,6 +76,11 @@ class Grid extends Component {
           visibility:'hidden',
           opacity:0,
           transition:'all .2s ease-in-out'
+        });
+        $('#ockupy-header-icon').css({
+          opacity:0,
+          transition:'all .3s ease-in-out',
+          visibility:'hidden'
         });
         $('.flex-stack').css({
           transition:'all .8s ease-in-out',
@@ -149,12 +161,12 @@ class Grid extends Component {
       <div className="flex-stack">
         <div className="sm-square square" id="square-1">
           <div  className="flex-item">
-            <p className="id-square"><i className="fa fa-envelope-o" aria-hidden="true"></i></p>
+            <p className="id-square"><i className="fa fa-envelope-o" aria-hidden="true" id="ockupy-header-icon"></i></p>
           </div>
         </div>
         <div className="sm-square-2 square" id="square-2">
           <div className="flex-item">
-            <p className="id-square"><i className="fa fa-briefcase" aria-hidden="true"></i></p>
+            <p className="id-square"><i className="fa fa-briefcase" aria-hidden="true" id="portfolio-header-icon"></i></p>
           </div>
         </div>
       </div>
