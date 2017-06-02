@@ -11,7 +11,7 @@ import Masonry from '../../ui/components/Masonry/masonry';
 // This component - represents a single page
 export const Portfolio = () =>
 <div>
-  <div className="container-fluid flash-about" id="desktop-sites">
+  <div className="container-fluid flash-about flash-smooth" id="desktop-sites">
     <PageHeader />
     <PageIntro />
     <Masonry />

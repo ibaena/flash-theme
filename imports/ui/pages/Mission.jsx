@@ -11,7 +11,7 @@ import PageContentA from '../../ui/components/PageContent/pageContentA';
 // This component - represents a single page
 export const Mission = () =>
 <div>
-  <div className="container-fluid flash-about" id="smooth-mission">
+  <div className="container-fluid flash-about flash-smooth" id="smooth-mission">
     <PageHeader />
     <PageIntro />
     <PageContent />

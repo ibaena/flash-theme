@@ -11,7 +11,7 @@ import PageContent from '../../ui/components/PageContent/pageContent';
 // This component - represents a single page
 export const About = () =>
 <div>
-  <div className="container-fluid flash-about" id="desktop-sites">
+  <div className="container-fluid flash-about flash-smooth" id="desktop-sites">
     <PageHeader />
     <PageIntro />
     <PageContent />
