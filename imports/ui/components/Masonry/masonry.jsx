@@ -29,16 +29,6 @@ class Masonry extends Component {
               <img src="images/Logos/musika_frere_logo.png" className="img-responsive"/>
             </a>
           </div>
-          <div className="flex-img-wrapper" style={{border:	'1px solid #404340'}}>
-            <a href="http://www.banehauntedhouse.com" target="_blank" className="port-links">
-              <img src="images/Logos/bane_logo.png" className="img-responsive"/>
-            </a>
-          </div>
-          <div className="flex-img-wrapper" style={{background:	'#a562cf'}}>
-            <a href="http://www.taphausjc.com/" target="_blank" className="port-links">
-              <img src="images/Logos/taphaus_logo.png" className="img-responsive"/>
-            </a>
-          </div>
         </div>
       </div>
     </div>

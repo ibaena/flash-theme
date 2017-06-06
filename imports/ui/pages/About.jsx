@@ -5,6 +5,7 @@ import Footer from '../../ui/components/Footer/footer';
 import PageHeader from '../../ui/components/PageHeader/pageHeader';
 import PageIntro from '../../ui/components/PageIntro/pageIntro';
 import PageContent from '../../ui/components/PageContent/pageContent';
+import ContactForm from '../../ui/components/Forms/form';
 
 
 
@@ -14,7 +15,7 @@ export const About = () =>
   <div className="container-fluid flash-about flash-smooth" id="desktop-sites">
     <PageHeader />
     <PageIntro />
-    <PageContent />
+    <ContactForm />
     <Footer />
   </div>
 </div>

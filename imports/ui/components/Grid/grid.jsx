@@ -98,8 +98,9 @@ class Grid extends Component {
           transition: 'all .8s ease-in-out',
         });
         setTimeout(function() {
-          FlowRouter.go('/portfolio');
-          FlowRouter.reload('/portfolio');
+          //FlowRouter.go('/portfolio');
+          //FlowRouter.reload('/portfolio');
+          window.location.href=('/portfolio');
         },1000);
 
       }
@@ -135,8 +136,9 @@ class Grid extends Component {
            opacity:0
         });
         setTimeout(function() {
-          FlowRouter.go('/mission');
-          FlowRouter.reload('/mission');
+          //FlowRouter.go('/mission');
+          //FlowRouter.reload('/mission');
+          window.location.href=('/mission');
         },1000);
 
       }
