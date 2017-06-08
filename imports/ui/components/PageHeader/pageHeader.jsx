@@ -51,6 +51,10 @@ class PageHeader extends Component{
     });
     setTimeout(function() {
       $("#head-vid").get(0).play();
+      $('#particles-js').css({
+        transform:'scale(1)',
+        opacity:1
+      });
     },300);
   }
 

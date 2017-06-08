@@ -6,6 +6,7 @@ import PageHeader from '../../ui/components/PageHeader/pageHeader';
 import PageIntro from '../../ui/components/PageIntro/pageIntro';
 import PageContent from '../../ui/components/PageContent/pageContent';
 import ContactForm from '../../ui/components/Forms/form';
+import Nav from '../../ui/components/Nav/nav';
 
 
 
@@ -13,6 +14,7 @@ import ContactForm from '../../ui/components/Forms/form';
 export const About = () =>
 <div>
   <div className="container-fluid flash-about flash-smooth" id="desktop-sites">
+    <Nav />
     <PageHeader />
     <PageIntro />
     <ContactForm />
