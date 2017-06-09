@@ -11,8 +11,8 @@ import Nav from '../../ui/components/Nav/nav';
 // This component - represents a single page
 export const Mission = () =>
 <div>
+  <Nav />
   <div className="container-fluid flash-about flash-smooth" id="smooth-mission">
-    <Nav />
     <PageHeader />
     <PageIntro />
     <PageContent />

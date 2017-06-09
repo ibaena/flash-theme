@@ -11,8 +11,8 @@ import Nav from '../../ui/components/Nav/nav';
 // This component - represents a single page
 export const Portfolio = () =>
 <div>
+  <Nav />
   <div className="container-fluid flash-about flash-smooth" id="desktop-sites">
-    <Nav />
     <PageHeader />
     <PageIntro />
     <Masonry />

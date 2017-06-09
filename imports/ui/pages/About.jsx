@@ -13,8 +13,9 @@ import Nav from '../../ui/components/Nav/nav';
 // This component - represents a single page
 export const About = () =>
 <div>
+  <Nav />
   <div className="container-fluid flash-about flash-smooth" id="desktop-sites">
-    <Nav />
+
     <PageHeader />
     <PageIntro />
     <ContactForm />
