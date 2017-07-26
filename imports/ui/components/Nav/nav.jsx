@@ -19,6 +19,14 @@ class Nav extends Component {
         setTimeout(function() {
           TweenMax.staggerTo(".menu-list-item", .3, {opacity:1, top:0, ease: Quart.easeInOut}, 0.4);
         }, 300);
+        setTimeout(function() {
+          $('#copyright').css({
+            transition:'all .3s ease-in-out',
+            left:'1em',
+            opacity:1
+          });
+        },800);
+
       }else {
         $('.nav-wrapper').css({
           height:'0%',
@@ -28,6 +36,11 @@ class Nav extends Component {
           position:'inherit'
         });
         TweenMax.staggerTo(".menu-list-item", .1, {opacity:0, top:'2em', ease: Quart.easeInOut}, 0.1);
+        $('#copyright').css({
+          transition:'all .3s ease-in-out',
+          left:'-1em',
+          opacity:0
+        });
       }
     });
     let d = new Date();
